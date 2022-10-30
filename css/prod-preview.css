@@ -1,0 +1,188 @@
+/* Adding offline fonts */
+/* @font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Bold.ttf);
+    font-weight: 700;
+    font-size: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Medium.ttf);
+    font-weight: 500;
+    font-size: normal;
+}
+
+@font-face {
+    font-family: "Fraunces";
+    src: url(../fonts/Fraunces_72pt-Bold.ttf);
+    font-weight: normal;
+    font-size: normal;
+} */
+
+/* Reset browser style settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* width: 100%; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-color: hsl(30, 38%, 92%);
+}
+
+.container {
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+ 
+.prod-img img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.prod-desc {
+    width: 100%;
+    padding: 1.5rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.prod-desc h3 {
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-size: 0.8rem;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 5px;
+}
+
+.prod-desc h1 {
+    font-family: 'Fraunces';
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 40px;
+    padding: 1rem 0;
+    color: hsl(212, 21%, 14%);
+}
+
+.prod-desc p:nth-of-type(1) {
+    font-family: 'Montserrat';
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+    color: hsl(228, 12%, 48%);
+}
+
+.prod-desc p {
+    padding: 0.5rem 0 1.5rem;
+}
+
+.prod-desc p ins {
+    font-family: 'Fraunces';
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: hsl(158, 36%, 37%);
+    text-decoration: none;
+}
+
+.prod-desc p del {
+    font-family: 'Fraunces';
+    font-size: 0.8rem;
+    position: relative;
+    top: -10px;
+    left: 10px;
+    color: hsl(228, 12%, 48%);
+}
+
+button {
+    width: 100%;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    border: none;
+    outline: none;
+    padding: 0.55rem 0;
+    background-color: hsl(158, 36%, 37%);
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+button:hover, button:focus {
+    background-color: hsl(156, 42%, 18%);
+}
+
+button img {
+    width: 15px;
+    height: 16px;
+}
+
+button span {
+    margin-left: 1rem;
+}
+
+.attribution {
+    font-family: 'Montserrat';
+    font-size: 0.65rem; 
+    padding-top: .5rem;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+} 
+
+/* Media Querries */
+
+@media only screen and (max-width: 500px) {
+
+    .container {
+        max-width: 300px;
+        max-height: 95%;
+        grid-template-columns: 1fr;
+    }
+
+    .prod-img {
+        width: 100%;
+    }
+
+    .prod-img img {
+        width: 100%;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+
+    .prod-desc p {
+        padding: 0rem 0 .5rem;
+    }
+
+    .prod-desc h1 {
+        font-size: 1.8rem;
+        line-height: 30px;
+    }
+
+    button {
+        padding: 0.55rem 0;
+        background-color: hsl(158, 36%, 37%);
+        border-radius: 10px;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .prod-desc {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: hsl(0, 0%, 100%);
+    }
+}
+
+
